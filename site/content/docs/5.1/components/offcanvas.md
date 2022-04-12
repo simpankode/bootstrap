@@ -27,8 +27,20 @@ Offcanvas is a sidebar component that can be toggled via JavaScript to appear fr
 
 Below is an offcanvas example that is shown by default (via `.show` on `.offcanvas`). Offcanvas includes support for a header with a close button and an optional body class for some initial `padding`. We suggest that you include offcanvas headers with dismiss actions whenever possible, or provide an explicit dismiss action.
 
-{{< example class="bd-example-offcanvas p-0 bg-light overflow-hidden" >}}
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+<div class="bd-example bd-example-offcanvas p-0 bg-light overflow-hidden">
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      Content for the offcanvas goes here. You can place just about any Bootstrap component or custom elements here.
+    </div>
+  </div>
+</div>
+
+```html
+<div class="offcanvas offcanvas-start show" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -37,7 +49,7 @@ Below is an offcanvas example that is shown by default (via `.show` on `.offcanv
     Content for the offcanvas goes here. You can place just about any Bootstrap component or custom elements here.
   </div>
 </div>
-{{< /example >}}
+```
 
 ### Live demo
 
